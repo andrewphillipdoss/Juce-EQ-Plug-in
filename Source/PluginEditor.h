@@ -49,8 +49,6 @@ private:
     Slider peakHighQSlider;
     Slider peakHighGainSlider;
     
-    FilterGraph filterGraph;
-    
 
     EqAudioProcessor& processor;
 

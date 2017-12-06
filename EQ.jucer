@@ -20,10 +20,6 @@
       <FILE id="QrkVbr" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="ULD574" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
-      <FILE id="qLr2DL" name="FilterGraph.cpp" compile="1" resource="0" file="Source/FilterGraph.cpp"/>
-      <FILE id="Tiokhw" name="FilterGraph.h" compile="0" resource="0" file="Source/FilterGraph.h"/>
-      <FILE id="KnxAZW" name="FilterInfo.cpp" compile="1" resource="0" file="Source/FilterInfo.cpp"/>
-      <FILE id="APJuR3" name="FilterInfo.h" compile="0" resource="0" file="Source/FilterInfo.h"/>
     </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>

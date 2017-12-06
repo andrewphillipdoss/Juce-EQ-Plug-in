@@ -14,35 +14,12 @@
 
 //==============================================================================
 EqAudioProcessorEditor::EqAudioProcessorEditor (EqAudioProcessor& p)
-: AudioProcessorEditor (&p), processor (p), filterGraph(4)
+: AudioProcessorEditor (&p), processor (p)
 {
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
     setSize (500, 400);
     
-    addAndMakeVisible(filterGraph);
-    
-    filterGraph.setVisible(true);
-    
-    filterGraph.setControlLimits(0, 20, 20000, -6, 6);
-    filterGraph.setControlLimits(1, 20, 20000, -6, 6);
-    filterGraph.setControlLimits(2, 20, 20000, -6, 6);
-    filterGraph.setControlLimits(3, 20, 20000, -6, 6);
-    
-    filterGraph.setControlParameters(0, 50, 2, 1);
-    filterGraph.setControlParameters(1, 500, 2, 1);
-    filterGraph.setControlParameters(2, 1000, 2, 1);
-    filterGraph.setControlParameters(3, 10000, 2, 1);
-    
-    filterGraph.setFilter(0, processor.fs, processor.lsfc);
-    filterGraph.setFilter(1, processor.fs, processor.hsfc);
-    filterGraph.setFilter(2, processor.fs, processor.plfc);
-    filterGraph.setFilter(3, processor.fs, processor.phfc);
-    
-    
-    void setFilter (int filterNum, double sampleRate, IIRCoefficients newCoefficients);
-    
-    /*
     lsfFreqSlider.addListener(this);
     lsfFreqSlider.setSliderStyle(Slider::SliderStyle::Rotary);
     lsfFreqSlider.setTextBoxStyle(Slider::TextBoxBelow, false, 30, 20);
@@ -118,8 +95,7 @@ EqAudioProcessorEditor::EqAudioProcessorEditor (EqAudioProcessor& p)
     hsfGainSlider.setTextBoxStyle(Slider::TextBoxBelow, false, 30, 20);
     hsfGainSlider.setRange(0,4);
     addAndMakeVisible(hsfGainSlider);
-     
-     */
+    
     
 }
 
@@ -143,7 +119,7 @@ void EqAudioProcessorEditor::resized()
     Rectangle<int> area(getLocalBounds());
     Rectangle<int> dialArea(getWidth()/3, getHeight()/4);
     
-    /*
+    
     
     hsfFreqSlider.setBounds(0, 0, dialArea.getWidth(), dialArea.getHeight());
     hsfQSlider.setBounds(getWidth()/3, 0, dialArea.getWidth(), dialArea.getHeight());
@@ -161,7 +137,7 @@ void EqAudioProcessorEditor::resized()
     lsfQSlider.setBounds(getWidth()/3, 3*(getHeight()/4), dialArea.getWidth(), dialArea.getHeight());
     lsfGainSlider.setBounds(2*(getWidth()/3), 3*(getHeight()/4), dialArea.getWidth(), dialArea.getHeight());
      
-     */
+     
     
     
     
